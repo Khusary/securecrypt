@@ -1,11 +1,11 @@
-const User = require("../models/user");
+const user = require("../models/user");
 const File = require("../models/file");
 
 const dashboardStats = async (req, res) => {
 
     try {
 
-        const totalUsers = await User.countDocuments();
+        const totalUsers = await user.countDocuments();
 
         const totalFiles = await File.countDocuments();
 
@@ -44,7 +44,7 @@ const recentUsers = async (req, res) => {
 
     try {
 
-        const users = await User.find()
+        const users = await user.find()
             .select("-password")
             .sort({ createdAt: -1 })
             .limit(5);
@@ -116,7 +116,7 @@ const deleteUser = async (req, res) => {
 
     try {
 
-        const user = await User.findById(req.params.id);
+        const user = await user.findById(req.params.id);
 
         if (!user) {
 
@@ -141,7 +141,7 @@ const deleteUser = async (req, res) => {
         });
 
         // Goge user
-        await User.findByIdAndDelete(user._id);
+        await user.findByIdAndDelete(user._id);
 
         res.json({
 

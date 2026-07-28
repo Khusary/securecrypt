@@ -1,11 +1,11 @@
-const User = require("../models/User");
+const user = require("../models/user");
 const File = require("../models/File");
 
 const getProfile = async (req, res) => {
 
     try {
 
-        const user = await User.findById(req.user.id).select("-password");
+        const user = await user.findById(req.user.id).select("-password");
 
         if (!user) {
 
