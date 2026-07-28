@@ -1,4 +1,4 @@
-const File = require("../models/file");
+const file = require("../models/file");
 const user = require("../models/user");
 
 const getDashboard = async (req, res) => {

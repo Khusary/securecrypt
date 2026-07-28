@@ -1,5 +1,5 @@
 const fs = require("fs");
-const File = require("../models/file");
+const file = require("../models/file");
 
 const user = require("../models/user");
 

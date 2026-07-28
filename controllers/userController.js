@@ -1,5 +1,5 @@
 const user = require("../models/user");
-const File = require("../models/File");
+const file = require("../models/File");
 
 const getProfile = async (req, res) => {
 
