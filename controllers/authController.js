@@ -1,6 +1,6 @@
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const user = require("../models/user");
+const User = require("../models/user");
 const Admin = require("../models/admin");
 
 const crypto = require("crypto");
@@ -46,7 +46,7 @@ const register = async (req, res) => {
         // Generate 6-digit OTP
         const otp = crypto.randomInt(100000, 999999).toString();
 
-        const user = new user({
+        const user = new User({
 
             name,
 
@@ -123,7 +123,7 @@ const verifyEmail = async (req, res) => {
 
         const { email, otp } = req.body;
 
-        const user = await user.findOne({ email });
+        const user = await User.findOne({ email });
 
         if (!user) {
 
@@ -202,7 +202,7 @@ const resendOTP = async (req, res) => {
 
         const { email } = req.body;
 
-        const user = await user.findOne({ email });
+        const user = await User.findOne({ email });
 
         if (!user) {
 
@@ -285,7 +285,7 @@ const forgotPassword = async (req, res) => {
 
         const { email } = req.body;
 
-        const user = await user.findOne({ email });
+        const user = await User.findOne({ email });
 
         if (!user) {
 
@@ -360,7 +360,7 @@ const verifyResetOTP = async (req, res) => {
 
         const { email, otp } = req.body;
 
-        const user = await user.findOne({ email });
+        const user = await User.findOne({ email });
 
         if (!user) {
 
@@ -489,7 +489,7 @@ const resetPassword = async (req, res) => {
 
         }
 
-        const user = await user.findById(decoded.id);
+        const user = await User.findById(decoded.id);
 
         if (!user) {
 
@@ -563,7 +563,7 @@ const login = async (req, res) => {
 
         const { email, password } = req.body;
 
-        const user = await user.findOne({ email });
+        const user = await User.findOne({ email });
 
         if (!user) {
             return res.status(404).json({
@@ -641,7 +641,7 @@ const adminLogin = async (req, res) => {
 
         const { email, password } = req.body;
 
-        const admin = await admin.findOne({ email });
+        const admin = await Admin.findOne({ email });
 
         if (!admin) {
 
