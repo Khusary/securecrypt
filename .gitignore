@@ -3,7 +3,6 @@ node_modules/
 uploads/
 encrypted/
 decrypted/
-keys/
 *.log
 ~$*
 *.tmp

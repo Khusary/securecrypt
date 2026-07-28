@@ -1,7 +1,7 @@
 const crypto = require("crypto");
 const fs = require("fs");
 
-const privateKey = fs.readFileSync("keys/private.pem", "utf8");
+const { privateKey } = require("./keyManager");
 
 function signFile(filePath) {
 

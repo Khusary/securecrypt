@@ -1,7 +1,6 @@
 const crypto = require("crypto");
 const fs = require("fs");
-
-const publicKey = fs.readFileSync("keys/public.pem", "utf8");
+const { publicKey } = require("./keyManager");
 
 function verifySignature(filePath, signature) {
 
@@ -13,12 +12,7 @@ function verifySignature(filePath, signature) {
 
     verifier.end();
 
-    return verifier.verify(
-        publicKey,
-        signature,
-        "base64"
-    );
-
+    return verifier.verify(publicKey, signature, "base64");
 }
 
 module.exports = verifySignature;
