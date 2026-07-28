@@ -15,7 +15,7 @@ const userRoutes = require("./routes/userRoutes");
 
 const adminRoutes = require("./routes/adminRoutes");
 
-const User = require("./models/user");
+const user = require("./models/user");
 
 const File = require("./models/file");
 const auth = require("./middlewares/auth");

@@ -1,7 +1,7 @@
 const fs = require("fs");
 const File = require("../models/file");
 
-const User = require("../models/user");
+const user = require("../models/user");
 
 const encryptFile = require("../utils/encrypt");
 const encryptAESKey = require("../utils/rsaEncrypt");
@@ -421,7 +421,7 @@ const sendDecryptOTP = async (req, res) => {
 
         const userId = req.user.id;
 
-        const user = await User.findById(userId);
+        const user = await user.findById(userId);
 
         if (!user) {
 
