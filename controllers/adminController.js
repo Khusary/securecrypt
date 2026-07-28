@@ -91,7 +91,7 @@ const getAllUsers = async (req, res) => {
 
     try {
 
-        const users = await User.find()
+        const users = await user.find()
 
             .select("-password")
 
@@ -165,7 +165,7 @@ const getUserDetails = async (req, res) => {
 
     try {
 
-        const user = await User.findById(req.params.id)
+        const user = await user.findById(req.params.id)
             .select("-password");
 
         if (!user) {
@@ -313,13 +313,13 @@ const getFileDetails = async (req, res) => {
 
 
 
-const Log = require("../models/log");
+const log = require("../models/log");
 
 const getAllLogs = async (req, res) => {
 
     try {
 
-        const logs = await Log.find()
+        const logs = await log.find()
 
             .populate("user", "name email")
 
@@ -341,13 +341,13 @@ const getAllLogs = async (req, res) => {
 
 };
 
-const Admin = require("../models/admin");
+const admin = require("../models/admin");
 
 const getAdminProfile = async (req, res) => {
 
     try {
 
-        const admin = await Admin.findById(req.admin.id)
+        const admin = await admin.findById(req.admin.id)
 
             .select("-password");
 
@@ -374,7 +374,7 @@ const updateAdminProfile = async (req, res) => {
 
     try {
 
-        const admin = await Admin.findById(req.admin.id);
+        const admin = await admin.findById(req.admin.id);
 
         if (!admin) {
 
