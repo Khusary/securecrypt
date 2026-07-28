@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Encrypt File | SecureCrypt</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h2>SecureCrypt</h2>
+
+        </div>
+
+        <div class="nav-right">
+
+            <a href="dashboard.html" class="btn">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Dashboard
+
+            </a>
+
+        </div>
+
+    </nav>
+
+    <!-- Main -->
+
+    <section class="dashboard">
+
+        <!-- Welcome -->
+
+        <div class="welcome-card">
+
+            <h1>
+
+                Encrypt & Upload File
+
+            </h1>
+
+            <p>
+
+                Secure your confidential files using AES-256 encryption before
+                uploading them to SecureCrypt.
+
+            </p>
+
+        </div>
+
+        <!-- Upload Card -->
+
+        <div class="card">
+
+            <h2 style="margin-bottom:25px;">
+
+                <i class="fa-solid fa-file-shield"></i>
+
+                Select File
+
+            </h2>
+
+            <form id="uploadForm">
+
+                <label class="custom-file">
+
+                    <input type="file" id="file" name="file" required>
+
+                    <span>
+
+                        <i class="fa-solid fa-folder-open"></i>
+
+                        Choose File
+
+                    </span>
+
+                </label>
+
+                <p id="selectedFile" style="margin-top:20px;font-weight:500;">
+                </p>
+
+                <button type="submit" class="btn" style="margin-top:30px;">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    Encrypt & Upload
+
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- Security Card -->
+
+        <div class="card" style="margin-top:30px;">
+
+            <h2>
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                Security Features
+
+            </h2>
+
+            <br>
+
+            <ul class="feature-list">
+
+                <li>
+
+                    <i class="fa-solid fa-check"></i>
+
+                    AES-256 File Encryption
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-check"></i>
+
+                    RSA Encrypted AES Key
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-check"></i>
+
+                    SHA-256 Integrity Verification
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-check"></i>
+
+                    RSA Digital Signature
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-check"></i>
+
+                    JWT Authentication
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <!-- Toast -->
+
+    <div id="toast" class="toast"></div>
+
+    <script>
+
+        const fileInput = document.getElementById("file");
+
+        const selectedFile = document.getElementById("selectedFile");
+
+        fileInput.addEventListener("change", () => {
+
+            if (fileInput.files.length > 0) {
+
+                selectedFile.innerHTML = `
+                    <i class="fa-solid fa-file"></i>
+                    ${fileInput.files[0].name}
+                `;
+
+            }
+
+        });
+
+    </script>
+
+
+    <script src="Js/config.js"></script>
+    <script src="js/notification.js"></script>
+
+    <script src="js/upload.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Profile | SecureCrypt</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar">
+
+    <div class="logo">
+
+      <i class="fa-solid fa-shield-halved"></i>
+
+      <h2>SecureCrypt</h2>
+
+    </div>
+
+    <div class="nav-right">
+
+      <a href="dashboard.html" class="btn">
+
+        <i class="fa-solid fa-arrow-left"></i>
+
+        Dashboard
+
+      </a>
+
+    </div>
+
+  </nav>
+
+  <section class="dashboard">
+
+    <!-- Welcome -->
+
+    <div class="welcome-card">
+
+      <h1>
+
+        My Profile
+
+      </h1>
+
+      <p>
+
+        View your account information and encryption statistics.
+
+      </p>
+
+    </div>
+
+    <!-- User Info -->
+
+    <div class="card">
+
+      <div class="profile-header">
+
+        <div class="avatar">
+
+          <i class="fa-solid fa-user"></i>
+
+        </div>
+
+        <div>
+
+          <h2 id="name">Loading...</h2>
+
+          <p id="email"></p>
+
+          <small id="joined"></small>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Statistics -->
+
+    <div class="card">
+
+      <h2>
+
+        <i class="fa-solid fa-chart-column"></i>
+
+        Statistics
+
+      </h2>
+
+      <div class="stats-grid">
+
+        <div class="stat-box">
+
+          <i class="fa-solid fa-lock"></i>
+
+          <h3 id="totalFiles">0</h3>
+
+          <p>Encrypted Files</p>
+
+        </div>
+
+        <div class="stat-box">
+
+          <i class="fa-solid fa-hard-drive"></i>
+
+          <h3 id="storageUsed">0 MB</h3>
+
+          <p>Storage Used</p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Security -->
+
+    <div class="card">
+
+      <h2>
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        Security Status
+
+      </h2>
+
+      <ul class="feature-list">
+
+        <li><i class="fa-solid fa-check"></i> AES-256 Encryption</li>
+
+        <li><i class="fa-solid fa-check"></i> RSA Key Protection</li>
+
+        <li><i class="fa-solid fa-check"></i> SHA-256 Integrity</li>
+
+        <li><i class="fa-solid fa-check"></i> Digital Signature</li>
+
+        <li><i class="fa-solid fa-check"></i> JWT Authentication</li>
+
+      </ul>
+
+    </div>
+
+    <!-- Actions -->
+
+    <div class="card">
+
+      <h2>
+
+        <i class="fa-solid fa-gear"></i>
+
+        Account
+
+      </h2>
+
+      <br>
+
+      <button class="btn">
+
+        <i class="fa-solid fa-user-pen"></i>
+
+        Edit Profile
+
+      </button>
+
+      <button class="btn delete-btn" onclick="logout()">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        Logout
+
+      </button>
+
+    </div>
+
+  </section>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="js/config.js"></script>
+<script src="js/notification.js"></script>
+<script src="js/profile.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+:root{
+
+    /* COLORS */
+
+    --primary:#2563eb;
+    --primary-dark:#1d4ed8;
+    --secondary:#38bdf8;
+
+    --success:#22c55e;
+    --warning:#f59e0b;
+    --danger:#ef4444;
+
+    --background:#0f172a;
+    --surface:#1e293b;
+    --surface-light:#334155;
+
+    --text:#f8fafc;
+    --text-secondary:#cbd5e1;
+
+    --border:#334155;
+
+    /* SHADOW */
+
+    --shadow:0 15px 35px rgba(0,0,0,.35);
+
+    /* BORDER */
+
+    --radius:18px;
+
+    /* TRANSITION */
+
+    --transition:.3s ease;
+
+}
+
+/* ==========================
+   ADMIN VARIABLES
+========================== */
+
+:root{
+
+    --admin-bg:#f4f7fb;
+
+    --admin-sidebar:#111827;
+
+    --admin-primary:#00d4ff;
+
+    --admin-card:#ffffff;
+
+    --admin-text:#222;
+
+    --admin-text-light:#777;
+
+}

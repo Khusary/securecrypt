@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Files | SecureCrypt</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-shield-halved"></i>
+
+            <h2>SecureCrypt</h2>
+
+        </div>
+
+        <div class="nav-right">
+
+            <a href="dashboard.html" class="btn">
+
+                <i class="fa-solid fa-arrow-left"></i>
+
+                Dashboard
+
+            </a>
+
+        </div>
+
+    </nav>
+
+    <section class="dashboard">
+
+        <div class="welcome-card">
+
+            <h1>My Encrypted Files</h1>
+
+            <p>
+
+                View, download and manage all your encrypted files.
+
+            </p>
+
+        </div>
+
+        <div style="margin-bottom:30px;">
+
+            <input type="text" id="search" class="input" placeholder="🔍 Search file...">
+
+        </div>
+
+        <div class="card">
+            <div class="table-responsive">
+                <table class="files-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th align="left">File Name</th>
+
+                            <th>Type</th>
+
+                            <th>Size</th>
+
+                            <th>Date</th>
+
+                            <th>Status</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="fileTable">
+
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- <div id="deleteModal" class="modal">
+    <div class="modal-content">
+        <i class="fa-solid fa-triangle-exclamation warning-icon"></i>
+
+        <h2>Delete File?</h2>
+
+        <p>
+            This action cannot be undone.
+        </p>
+
+        <div class="modal-buttons">
+            <button id="cancelDelete" class="btn secondary-btn">
+                Cancel
+            </button>
+
+            <button id="confirmDelete" class="btn danger-btn">
+                Delete
+            </button>
+        </div>
+    </div>
+</div> -->
+
+    <!-- Delete Modal -->
+    <div id="deleteModal" class="modal">
+
+        <div class="modal-content">
+
+            <i class="fa-solid fa-triangle-exclamation warning-icon"></i>
+
+            <h2>Delete File?</h2>
+
+            <p>
+                This action cannot be undone.
+            </p>
+
+            <div class="modal-buttons">
+
+                <button id="cancelDelete" class="btn secondary-btn">
+
+                    Cancel
+
+                </button>
+
+                <button id="confirmDelete" class="btn danger-btn">
+
+                    Delete
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+
+
+
+
+    <script src="Js/config.js"></script>
+    <script src="js/notification.js"></script>
+    <script src="js/my-files.js"></script>
+
+
+</body>
+
+</html>

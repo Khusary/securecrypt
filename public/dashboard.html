@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dashboard | SecureCrypt</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+  <nav class="navbar">
+
+    <div class="logo">
+
+      <i class="fa-solid fa-shield-halved"></i>
+
+      <h2>SecureCrypt</h2>
+
+    </div>
+
+    <div class="nav-right">
+
+      <span id="username">
+
+        <i class="fa-solid fa-user"></i>
+
+        User
+
+      </span>
+
+      <button id="logoutBtn">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+
+        Logout
+
+      </button>
+
+    </div>
+
+  </nav>
+
+  <section class="dashboard">
+
+    <div class="welcome-card">
+
+      <h1>Welcome Back 👋</h1>
+
+      <p>
+
+        Manage, encrypt and protect your files securely.
+
+      </p>
+
+    </div>
+
+    <div class="stats">
+
+      <div class="stat-card">
+
+        <i class="fa-solid fa-folder"></i>
+
+        <h2 id="totalFiles">0</h2>
+
+        <p>Total Files</p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <i class="fa-solid fa-database"></i>
+
+        <h2 id="storageUsed">0 MB</h2>
+
+        <p>Storage Used</p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <i class="fa-solid fa-clock"></i>
+
+        <h2 id="lastUpload">--</h2>
+
+        <p>Last Upload</p>
+
+      </div>
+
+    </div>
+
+    <div class="actions">
+
+      <a href="encrypt.html" class="action-card">
+
+        <i class="fa-solid fa-lock"></i>
+
+        <h3>Encrypt</h3>
+
+        <p>Encrypt and upload files</p>
+
+      </a>
+
+      <a href="decrypt.html" class="action-card">
+
+        <i class="fa-solid fa-lock-open"></i>
+
+        <h3>Decrypt</h3>
+
+        <p>Decrypt encrypted files</p>
+
+      </a>
+
+      <a href="my-files.html" class="action-card">
+
+        <i class="fa-solid fa-folder-open"></i>
+
+        <h3>My Files</h3>
+
+        <p>View uploaded files</p>
+
+      </a>
+
+      <a href="profile.html" class="action-card">
+
+        <i class="fa-solid fa-user"></i>
+
+        <h3>Profile</h3>
+
+        <p>Manage your account</p>
+
+      </a>
+
+    </div>
+
+  </section>
+
+  <script src="Js/config.js"></script>
+
+  <script src="js/notification.js"></script>
+  <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

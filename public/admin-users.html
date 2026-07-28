@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Users Management | SecureCrypt</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/admin-dashboard.css">
+    <link rel="stylesheet" href="css/admin-users.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <div class="admin-container">
+
+        <aside class="admin-sidebar">
+
+            <div class="admin-logo">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h2>SecureCrypt</h2>
+
+                <small>Admin Panel</small>
+
+            </div>
+
+            <ul>
+
+                <li>
+
+                    <a href="admin-dashboard.html">
+
+                        <i class="fa-solid fa-gauge"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+                <li class="active">
+
+                    <a href="admin-users.html">
+
+                        <i class="fa-solid fa-users"></i>
+
+                        Users
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="admin-files.html">
+
+                        <i class="fa-solid fa-folder"></i>
+
+                        Files
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="admin-logs.html">
+
+                        <i class="fa-solid fa-clock-rotate-left"></i>
+
+                        Activity Logs
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="admin-profile.html">
+
+                        <i class="fa-solid fa-user"></i>
+
+                        Profile
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="#" id="logoutBtn">
+                    
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    
+                        Logout
+                    
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </aside>
+
+        <main class="admin-main">
+
+            <button id="menuToggle" class="menu-toggle"> <i class="fa-solid fa-bars"></i> </button>
+
+            <div class="admin-header">
+
+                <h1>Users Management</h1>
+
+                <p>Manage all registered users.</p>
+
+            </div>
+
+            <div class="search-box">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input type="text" id="searchUser" placeholder="Search by name or email...">
+
+            </div>
+
+            <div class="admin-table">
+
+                <div class="table-responsive">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Name</th>
+
+                            <th>Email</th>
+
+                            <th>Role</th>
+
+                            <th>Joined</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="usersTable">
+
+                    </tbody>
+
+                </table>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- ==========================
+     USER DETAILS MODAL
+========================== -->
+
+    <div id="userModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close-modal">&times;</span>
+
+            <h2>User Details</h2>
+
+            <div class="modal-body">
+
+                <p><strong>Name:</strong> <span id="modalName"></span></p>
+
+                <p><strong>Email:</strong> <span id="modalEmail"></span></p>
+
+                <p><strong>Role:</strong> <span id="modalRole"></span></p>
+
+                <p><strong>Date Joined:</strong> <span id="modalJoined"></span></p>
+
+                <p><strong>Total Files:</strong> <span id="modalFiles"></span></p>
+
+                <p><strong>Total Storage:</strong> <span id="modalStorage"></span></p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="Js/config.js"></script>
+    <script src="js/admin-common.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/admin-users.js"></script>
+
+</body>
+
+</html>

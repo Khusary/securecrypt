@@ -1,0 +1,52 @@
+
+.logs-toolbar{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:25px;
+
+}
+
+.logs-toolbar input,
+
+.logs-toolbar select{
+
+    padding:12px 15px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+}
+
+.logs-toolbar input{
+
+    flex:1;
+
+}
+
+@media (max-width:768px){
+
+.logs-toolbar{
+
+flex-direction:column;
+
+gap:12px;
+
+}
+
+.logs-toolbar input,
+
+.logs-toolbar select{
+
+width:100%;
+
+font-size:14px;
+
+}
+
+}

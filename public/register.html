@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | SecureCrypt</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/auth.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+  <div class="auth-container">
+
+    <form class="auth-form" id="registerForm">
+
+      <div class="logo">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <h2>SecureCrypt</h2>
+
+      </div>
+
+      <h1>Create Account</h1>
+
+      <p class="subtitle">
+        Create your SecureCrypt account
+      </p>
+
+      <div class="input-box">
+
+        <i class="fa-solid fa-user"></i>
+
+        <input type="text" id="name" placeholder="Full Name" required>
+
+      </div>
+
+      <div class="input-box">
+
+        <i class="fa-solid fa-envelope"></i>
+
+        <input type="email" id="email" placeholder="Email Address" required>
+
+      </div>
+
+      <div class="input-box">
+
+        <i class="fa-solid fa-lock"></i>
+
+        <input type="password" id="password" placeholder="Password" required>
+
+      </div>
+
+      <div class="input-box">
+
+        <i class="fa-solid fa-lock"></i>
+
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+
+      </div>
+
+      <button type="submit">
+
+        <i class="fa-solid fa-user-plus"></i>
+
+        Create Account
+
+      </button>
+
+      <p id="message"></p>
+
+      <p>
+
+        Already have an account?
+
+        <a href="login.html">Login</a>
+
+      </p>
+
+    </form>
+
+  </div>
+
+  <script src="Js/config.js"></script>
+  <script src="js/notification.js"></script>
+  <script src="js/register.js"></script>
+
+</body>
+
+</html>
