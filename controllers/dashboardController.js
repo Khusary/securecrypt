@@ -1,11 +1,11 @@
-const file = require("../models/file");
-const user = require("../models/user");
+const File = require("../models/file");
+const User = require("../models/user");
 
 const getDashboard = async (req, res) => {
 
     try {
 
-        const user = await User.findById(req.user.id).select("-password");
+        const currentUser = await User.findById(req.user.id).select("-password");
 
         const files = await File.find({
             owner: req.user.id
@@ -29,7 +29,7 @@ const getDashboard = async (req, res) => {
 
         res.json({
 
-            user,
+            user: currentUser,
 
             totalFiles,
 
