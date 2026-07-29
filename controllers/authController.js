@@ -69,39 +69,39 @@ const register = async (req, res) => {
         await user.save();
 
         // Send OTP Email
-        // await sendEmail(
+        await sendEmail(
 
-        //     email,
+            email,
 
-        //     "SecureCrypt Email Verification",
+            "SecureCrypt Email Verification",
 
-        //     `
-        //         <h2>Welcome to SecureCrypt</h2>
+            `
+                <h2>Welcome to SecureCrypt</h2>
 
-        //         <p>Your verification code is:</p>
+                <p>Your verification code is:</p>
 
-        //         <h1 style="letter-spacing:5px;color:#1565c0;">
-        //             ${otp}
-        //         </h1>
+                <h1 style="letter-spacing:5px;color:#1565c0;">
+                    ${otp}
+                </h1>
 
-        //         <p>This code will expire in 10 minutes.</p>
+                <p>This code will expire in 10 minutes.</p>
 
-        //         <p>If you did not create this account, please ignore this email.</p>
-        //     `
+                <p>If you did not create this account, please ignore this email.</p>
+            `
 
-        // );
+        );
 
 
         console.log("OTP:", otp);
 
 
 
-        await user.save();
+        // await user.save();
 
-        return res.status(201).json({
-            message: "Registration successful",
-            email: user.email
-        });
+        // return res.status(201).json({
+        //     message: "Registration successful",
+        //     email: user.email
+        // });
 
         res.status(201).json({
 
