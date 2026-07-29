@@ -29,6 +29,9 @@ const uploadFile = async (req, res) => {
     try {
         const uploadedFile = req.file.path;
 
+        console.log("Uploaded file:", uploadedFile);
+        console.log("Exists:", fs.existsSync(uploadedFile));
+
         const originalHash = generateHash(uploadedFile);
 
         const encryptedFile = "encrypted/" + Date.now() + ".enc";
