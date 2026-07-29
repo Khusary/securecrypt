@@ -1,3 +1,4 @@
+const cors = require("cors");
 const express = require("express");
 const multer = require("multer");
 const path = require("path");
@@ -32,6 +33,11 @@ app.use(express.json());
 
 app.use(express.urlencoded({
     extended: true,
+}));
+
+app.use(cors({
+    origin: "https://securecrypt-frontend.vercel.app",
+    credentials: true
 }));
 
 // Static files
